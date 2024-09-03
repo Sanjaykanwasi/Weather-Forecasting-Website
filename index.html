@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div>WEATHER FORECAST</div>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+      <!-- Search Section -->
+      <div class="search-section">
+        <div class="input-area">
+          <span class="material-symbols-outlined"> search </span>
+          <input
+            type="search"
+            placeholder="Enter City Name"
+            class="search-input"
+          />
+        </div>
+        <button class="location-button">
+          <span class="material-symbols-outlined">location_on</span>
+        </button>
+      </div>
+      <!-- No Result Div-->
+      <div class="no-result">
+        <img src="Images/no-result.svg" alt="" class="weather-icon" />
+        <h3 class="title">Invalid Search!</h3>
+        <p class="message">
+          You have enter a wrong City name. Please enter a valid City or Country
+          name or try again later.
+        </p>
+      </div>
+
+      <!-- Weather Section -->
+      <div class="weather-section">
+        <!-- Current Weather -->
+        <div class="current-weather">
+          <img src="Images/clouds.svg" alt="" class="weather-icon" />
+          <h2 class="temperature">00<span>°C</span></h2>
+          <p class="description">Weather Description</p>
+        </div>
+        <!-- Hourly Weather -->
+        <div class="hourly-weather">
+          <ul class="weather-list">
+            <!-- <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li>
+            <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li>
+            <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li>
+            <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li>
+            <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li>
+            <li class="weather-item">
+              <p class="time">00:00</p>
+              <img src="Images/clouds.svg" alt="" class="weather-icon" />
+              <p class="temperature">20°</p>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+      <div>Made By Sanjay With ❤️</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

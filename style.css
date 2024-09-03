@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0fa3b1;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+/* Header */
+header {
+  position: absolute;
+  background: #0b3142;
+  top: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+header div {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  border-radius: 13px;
+  max-width: 430px;
+  flex-grow: 1;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  padding: 25px;
+  gap: 7px;
+  align-items: center;
+}
+
+.search-section .input-area {
+  height: 57px;
+  width: 100%;
+  position: relative;
+}
+
+.search-section .input-area span {
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  left: 17px;
+  transform: translateY(-50%);
+}
+
+.search-section .search-input {
+  height: 100%;
+  font-size: 1.25rem;
+  outline: none;
+  font-weight: 500;
+  width: 100%;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: 1px solid #c0b7b1;
+  padding: 0 20px 0 50px;
+  transition: all 0.3s ease;
+}
+
+.search-section .search-input:focus {
+  border-color: #0fa3b1;
+}
+
+.search-section .search-input::placeholder {
+  text-transform: none;
+}
+
+.search-section .location-button {
+  height: 57px;
+  width: 60px;
+  outline: none;
+  cursor: pointer;
+  background: #fff;
+  color: #0fa3b1;
+  border-radius: 7px;
+  border: 1px solid #c0b7b1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.search-section .location-button:hover {
+  color: #fff;
+  background: #0fa3b1;
+  border-color: #0fa3b1;
+}
+
+.search-section .location-button span {
+  font-size: 2rem;
+}
+
+/* No Result Section */
+.no-result {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body.show-no-result .no-result {
+  display: flex;
+}
+
+.no-result .title {
+  margin: 25px 0 15px;
+}
+
+.no-result .message {
+  font-weight: 500;
+}
+
+/* Current Location */
+body.show-no-result .weather-section {
+  visibility: hidden;
+}
+
+.weather-section .current-weather {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 50px;
+  align-items: center;
+}
+
+.current-weather .weather-icon {
+  width: 140px;
+  aspect-ratio: 1;
+}
+
+.current-weather .temperature {
+  font-size: 4rem;
+  margin: 23px 0;
+  display: flex;
+}
+
+.current-weather .description {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.current-weather .temperature span {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 5px 0 0 2px;
+}
+
+/* hourly weather */
+
+.hourly-weather {
+  padding: 16px 25px;
+  border-top: 1px solid #c0b7b1;
+}
+
+.hourly-weather .weather-list {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  padding-bottom: 15px;
+  margin-bottom: -15px;
+}
+
+.hourly-weather:hover .weather-list {
+  scrollbar-color: #c0b7b1 transparent;
+}
+
+.hourly-weather .weather-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  font-weight: 500;
+}
+
+.hourly-weather .weather-item .weather-icon {
+  width: 30px;
+  aspect-ratio: 1;
+}
+
+/* Footer Section */
+footer {
+  position: absolute;
+  background: #0b3142;
+  bottom: 0;
+  width: 100%;
+  padding-top: 17px;
+}
+
+footer div {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Resposive Website */
+
+@media (max-width: 645px) {
+  body {
+    padding: 15px;
+  }
+
+  .search-section {
+    padding: 20px;
+  }
+
+  .hourly-weather {
+    padding: 16px 20px;
+  }
+
+  .hourly-weather .weather-list {
+    gap: 32px;
+  }
+}
